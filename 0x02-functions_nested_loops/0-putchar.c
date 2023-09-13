@@ -1,21 +1,20 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main-Entry point
- *
- * This function prints all lowercase letters of the English alphabet in order,
- *
- * Return:Always 0(succes).
+ * main - print _putchar
+ * is written by mbah
+ * Return: 0
  */
+
 int main(void)
 {
-	char str[] = "_putchar";
-
-	for (int i = 0; i <= 8; i++)
-	{
-		putchar(str[i]);
-	}
-
-	return (0);
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
+_putchar('\n');
+return (0);
 }
