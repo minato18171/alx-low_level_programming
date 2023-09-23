@@ -1,19 +1,19 @@
-#include "main.h"
-
-/**
- * print_last_digit - Prints the last digit of a number.
- * @n: The number in question.
- *
- * Return: Value of the last digit.
- */
-int print_last_digit(int n)
+#include<main.h>
+void puts_half(char *str)
 {
-	int last_digit = n % 10;
-
-	if (last_digit < 0)
-		last_digit *= -1;
-
-	_putchar(last_digit + '0');
-
-	return (last_digit);
+int length_of_the_string=0;
+int m=0;
+int i=0;
+int indice=0;
+while (str[indice++]){
+     length_of_the_string++; 
+}
+for (i=0;i<=length_of_the_string/2;i++ ){
+m=length_of_the_string/2;
+if(length_of_the_string%2==0){
+    putchar(str[i]);
+}else if (length_of_the_string % 2 != 0){
+    putchar(str[(length_of_the_string-1)/2]);
+}
+}
 }
