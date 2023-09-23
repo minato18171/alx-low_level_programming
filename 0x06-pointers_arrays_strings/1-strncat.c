@@ -2,7 +2,7 @@
 
 /**
  * _strncat - concatenates n bytes from a string to another
- * @destination: destination string
+ * @dest: destination string
  * @src: source string
  * @n: number of bytes of str to concatenate
  *
