@@ -1,4 +1,5 @@
 #include "main.h"
+#include<stdlib.h>
 /**
  * create_array - creates an array of chars..
  * @size: size.
@@ -7,9 +8,15 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *y = malloc(size)
-	if (size ==0)
-	{ 
-		return(0);
+	p = (char *) malloc(sizeof(char) * size);
+	if (size == 0 || p == NULL)
+	{
+		return (0);
 	}
+	while (size--)
+	{
+		p[size] = c;
+	}
+
+return (p);
 }
