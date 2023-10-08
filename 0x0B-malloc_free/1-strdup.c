@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * *_strdup - copies the string given as parameter
@@ -9,20 +9,25 @@
  */
 char *_strdup(char *str)
 {
-	int len = 0;
-	char *duplicat;
-	unsigned int i = 0;
+	char *dup;
+	unsigned int i, len;
+
+	i = 0;
+	len = 0;
 
 	if (str == NULL)
 		return (NULL);
-	while (*str != '\0')
+
+	while (str[len])
 		len++;
 
-	duplicat = malloc(sizeof(char) * (len + 1));
-	while (*str != '\0')
-	{
-		duplicat[i] = str[i];
+	dup = malloc(sizeof(char) * (len + 1));
+
+	if (dup == NULL)
+		return (NULL);
+
+	while ((dup[i] = str[i]) != '\0')
 		i++;
-	}
-	return (duplicat);
+
+	return (dup);
 }
